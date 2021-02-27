@@ -14,7 +14,9 @@
 
 .phone {
     position: absolute;
-    top: 8.5%;
+    top: max(80px, 8.5%);
+    bottom: max(15px, auto);
     left: auto;
     right: 7.5%;
+    height: 85%;
 }
