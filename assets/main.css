@@ -20,3 +20,12 @@
     right: 7.5%;
     height: 85%;
 }
+
+.phone-img {
+    z-index: 999;
+}
+
+.screenshot {
+    scale: 80%;
+    z-index: 0;
+}
