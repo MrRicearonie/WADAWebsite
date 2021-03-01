@@ -57,8 +57,13 @@ body {
     z-index: 999;
 }
 
-.screenshot {
-    scale: 80%;
+.screenshot1 {
+    visibility: visible;
+    z-index: 0;
+}
+
+.screenshot2 {
+    visibility: hidden;
     z-index: 0;
 }
 
