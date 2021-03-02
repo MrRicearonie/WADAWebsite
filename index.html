@@ -6,7 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel=icon href="assets/img/Logo/favicon.png" type="image/png">
     <title>WADA</title>
+    <link href="assets/dist/aos.css" rel="stylesheet">
     <link href="assets/main.css" rel="stylesheet">
 </head>
 <body>
@@ -17,22 +19,41 @@
     </div>
 
     <div id="content">
-        <div class="top-content">
+        <div class="phone">
+            <img class="screenshot1 phone" src="assets/img/screenshots/placeholder1.png" height="100%"/>
+            <img class="screenshot2 phone" src="assets/img/screenshots/placeholder2.png" height="100%"/>
+            <img class="phone-img phone" src="assets/img/Pixel3.png" height="100%"/>
+        </div>
+        <div class="top-content slide">
             <div class="about">
-                <p>You wouldn't let a<br>child starve.</p>
-                <p>Would you?</p>
-                <img src="assets/img/Logo/WADANameLogo.png" width="250dp"/>
+                <p class="aos-item" data-aos="fade" data-aos-delay="50" data-aos-once="true">You wouldn't let a</p>
+                <p class="aos-item" data-aos="fade" data-aos-delay="150" data-aos-once="true"> child starve.</p>
+                <p class="aos-item" data-aos="fade" data-aos-delay="1000" data-aos-duration="500" data-aos-once="true">Would you?</p>
+                <img class="aos-item" data-aos="fade" data-aos-delay="1500" data-aos-duration="1250" data-aos-once="true" src="assets/img/Logo/WADANameLogo.png" width="250dp"/>
             </div>
-            <div class="phone">
-                <img class="screenshot1 phone" src="assets/img/screenshots/placeholder1.png" height="100%"/>
-                <img class="screenshot2 phone" src="assets/img/screenshots/placeholder2.png" height="100%" />
-                <img class="phone-img phone" src="assets/img/Pixel3.png" height="100%"/>
+            
+        </div>
+        <div class="desc-content slide">
+            <div class="about">
+                <p class="aos-item" data-aos="fade-up" data-aos-delay="250" data-aos-once="true">Add your plant</p>
+                <p class="aos-item" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">to get notified when</p>
+                <p class="aos-item" data-aos="fade-up" data-aos-delay="750" data-aos-once="true">it needs watering.</p>
             </div>
         </div>
-        <div class="desc-content">
-            <p>Hello</p>
+        <div class="desc-content slide">
+            <div class="about">
+                <p>Keep track of your</p>
+                <p>plant's location with</p>
+                <p>pictures and rooms</p>
+            </div>
         </div>
     </div>
+    <script src="assets/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
 </body>
 
 </html>

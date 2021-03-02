@@ -13,13 +13,48 @@
     src: url("fonts/NotoSans-Italic.ttf")
 }
 
+@keyframes phone-in {
+    from {opacity: 0%; right:0%;}
+    to {opacity: 100%; z-index: 0;}
+}
+
+@keyframes about-text {
+    from {opacity: 0%; left:10%;}
+    to {opacity: 100%;}
+}
+
+html {
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+  }
+
 body {
-    /* display: grid; */
     font-family: "NotoSans-Regular";
+    background: linear-gradient(2deg, rgb(33, 254, 164) 0%, rgb(10, 130, 255) 45%, #ffffff 80%);
+}
+
+head {
+   z-index: 1000;
+}
+
+#content {
+    margin-top: 85px;
+}
+
+.slide {
+    scroll-snap-align: start;
+    min-width: 100vw;
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 100vw);
+    
 }
 
 .header-box {
-    position: absolute;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -31,12 +66,17 @@ body {
     grid-area: content;
 }
 
+.top-content {
+    animation-name: about-text;
+    animation-duration: 2s;
+}
 
 .about {
-    margin-top: 20%;
+    margin-top: 35vh;
     margin-left: 20%;
     font-size: 36px;
     font-family: "NotoSans-Bold";
+    z-index: 0;
 }
 
 .logo {
@@ -45,12 +85,14 @@ body {
 }
 
 .phone {
-    position: absolute;
+    position:fixed;
     top: max(80px, 8.5%);
     bottom: max(15px, auto);
     left: auto;
     right: 15%;
     height: 85%;
+    animation-name: phone-in;
+    animation-duration: 1.5s;
 }
 
 .phone-img {
@@ -64,9 +106,9 @@ body {
 
 .screenshot2 {
     visibility: hidden;
-    z-index: 0;
+    z-index: 5;
 }
 
 .desc-content {
-    margin-top: 20%;
+    margin-bottom: 1000px;
 }
