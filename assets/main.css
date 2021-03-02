@@ -72,8 +72,16 @@ head {
 }
 
 .about {
+    margin-top: 30vh;
+    margin-left: 20vw;
+    font-size: 36px;
+    font-family: "NotoSans-Bold";
+    z-index: 0;
+}
+
+.three-line {
     margin-top: 35vh;
-    margin-left: 20%;
+    margin-left: 20vw;
     font-size: 36px;
     font-family: "NotoSans-Bold";
     z-index: 0;
@@ -89,7 +97,7 @@ head {
     top: max(80px, 8.5%);
     bottom: max(15px, auto);
     left: auto;
-    right: 15%;
+    right: 7vw;
     height: 85%;
     animation-name: phone-in;
     animation-duration: 1.5s;
