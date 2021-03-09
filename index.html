@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel=icon href="assets/img/Logo/favicon.png" type="image/png">
     <title>WADA</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <link href="assets/dist/aos.css" rel="stylesheet">
     <link href="assets/main.css" rel="stylesheet">
 </head>
@@ -20,9 +21,8 @@
 
     <div id="content">
         <div class="phone">
-            <img class="screenshot1 phone" src="assets/img/screenshots/placeholder1.png" height="100%"/>
-            <img class="screenshot2 phone" src="assets/img/screenshots/placeholder2.png" height="100%"/>
-            <img class="phone-img phone" src="assets/img/Pixel3.png" height="100%"/>
+            <img class="screenshot1 phone phone-anim" src="assets/img/screenshots/placeholder1.png" height="100%"/>
+            <img class="phone-img phone phone-anim" src="assets/img/Pixel3.png" height="100%"/>
         </div>
         <div class="top-content slide">
             <div class="about">
@@ -34,6 +34,7 @@
             
         </div>
         <div class="desc-content slide">
+            <img class="screenshot2 phone" src="assets/img/screenshots/placeholder2.png" height="100%"/>
             <div class="three-line">
                 <p class="aos-item" data-aos="fade-up" data-aos-delay="250" data-aos-once="true">Add your plant</p>
                 <p class="aos-item" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">to get notified when</p>
@@ -41,6 +42,7 @@
             </div>
         </div>
         <div class="desc-content slide">
+            <img class="screenshot3 phone" src="assets/img/screenshots/placeholder1.png" height="100%"/>
             <div class="three-line">
                 <p>Keep track of your</p>
                 <p>plant's location with</p>
@@ -48,6 +50,32 @@
             </div>
         </div>
     </div>
+    <script>
+        function getTop() {
+            if(typeof pageYOffset != 'undefined'){
+                return pageYOffset;
+            } else {
+                var body = document.body;
+                var doc = document.documentElement
+                doc = (doc.clientHeight)? doc : body;
+                return doc.scrollTop;
+            }
+        }
+
+        $(window).on("scroll", function() {
+            if(getTop() >= 500) {
+                $(".screenshot2").fadeIn('slow');
+            } else if(getTop() < 500) {
+                $(".screenshot2").fadeOut('slow');
+            };
+            
+            if(getTop() >= 1000) {
+                $(".screenshot3").fadeIn('slow');
+            } else if(getTop() < 1000 && getTop() >= 500) {
+                $(".screenshot3").fadeOut('slow');
+            };
+        });
+    </script>
     <script src="assets/dist/aos.js"></script>
     <script>
       AOS.init({
