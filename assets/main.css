@@ -14,7 +14,7 @@
 }
 
 @keyframes phone-in {
-    from {opacity: 0%; right:0%;}
+    from {opacity: 0%;}
     to {opacity: 100%; z-index: 0;}
 }
 
@@ -31,7 +31,7 @@ html {
 
 body {
     font-family: "NotoSans-Regular";
-    background: linear-gradient(2deg, rgb(33, 254, 164) 0%, rgb(10, 130, 255) 45%, #ffffff 80%);
+    background: linear-gradient(2deg, rgb(10, 130, 255) 0%, #ffffff 80%);
 }
 
 head {
@@ -44,10 +44,8 @@ head {
 
 .slide {
     scroll-snap-align: start;
-    min-width: 100vw;
     max-height: 100vh;
     display: grid;
-    grid-template-columns: repeat(2, 100vw);
     
 }
 
@@ -64,6 +62,7 @@ head {
 
 #content {
     grid-area: content;
+    overflow:-moz-hidden-unscrollable;
 }
 
 .top-content {
@@ -73,15 +72,15 @@ head {
 
 .about {
     margin-top: 30vh;
-    margin-left: 20vw;
+    margin-bottom: 10vh;
     font-size: 36px;
     font-family: "NotoSans-Bold";
     z-index: 0;
 }
 
 .three-line {
+    width:fit-content;
     margin-top: 35vh;
-    margin-left: 20vw;
     font-size: 36px;
     font-family: "NotoSans-Bold";
     z-index: 0;
@@ -96,8 +95,8 @@ head {
     position:fixed;
     top: max(80px, 8.5%);
     bottom: max(15px, auto);
-    left: auto;
-    right: 7vw;
+    /* left: auto; */
+    /* right: 7vw; */
     height: 85%;
 }
 
