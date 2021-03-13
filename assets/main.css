@@ -127,5 +127,21 @@ head {
 }
 
 .desc-content {
-    margin-bottom: 1000px;
+    margin-bottom: 500px;
+}
+
+#footer {
+    margin-top: -15px;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: start;
+    max-height: 25px;
+    display: grid;
+}
+
+#footer .copyright {
+    font-size: 15px;
+    font-family: "NotoSans-Regular";
 }
